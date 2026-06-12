@@ -1,3 +1,5 @@
+"""Alternative Version des Merge-Sort-Skripts auf dem main-Branch."""
+
 def ASSIGNMENT(new_list, i, old_list, j):
     new_list[i] = old_list[j]
 
