@@ -1,4 +1,4 @@
-"""Merge-Sort-Algorithmus mit einfacher Visualisierung"""
+"""Alternative Version des Merge-Sort-Skripts auf dem main-Branch."""
 
 from __future__ import annotations
 
@@ -68,7 +68,7 @@ def main() -> None:
 
    # plot_values(original_values, "Werte vor dem Sortieren")
    # plot_values(sorted_values, "Werte nach Merge Sort")
-   
+
    plot_sorting_result(original_values, sorted_values)
 
 
