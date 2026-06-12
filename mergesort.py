@@ -42,13 +42,18 @@ def merge_sort(values: Sequence[int]) -> list[int]:
     return merge(left_half, right_half)
 
 
-def plot_values(values: Sequence[int], title: str) -> None:
-    """Visualisiere Werte als Balkendiagramm"""
-    plt.figure(figsize=(8, 4))
-    plt.bar(range(len(values)), values)
-    plt.title(title)
+def plot_sorting_result(original_values: Sequence[int], sorted_values: Sequence[int]) -> None:
+    """Vergleiche die Werte vor und nach dem Sortieren in einem Diagramm."""
+    indices = range(len(original_values))
+
+    plt.figure(figsize=(9, 5))
+    plt.plot(indices, original_values, marker="o", label="Vor dem Sortieren")
+    plt.plot(indices, sorted_values, marker="o", label="Nach dem Sortieren")
+
+    plt.title("Vergleich der Werte vor und nach Merge Sort")
     plt.xlabel("Index")
     plt.ylabel("Wert")
+    plt.legend()
     plt.tight_layout()
     plt.show()
 
@@ -61,8 +66,10 @@ def main() -> None:
     print(f"Ursprüngliche Werte: {original_values}")
     print(f"Sortierte Werte:     {sorted_values}")
 
-    plot_values(original_values, "Werte vor dem Sortieren")
-    plot_values(sorted_values, "Werte nach Merge Sort")
+   # plot_values(original_values, "Werte vor dem Sortieren")
+   # plot_values(sorted_values, "Werte nach Merge Sort")
+   
+   plot_sorting_result(original_values, sorted_values)
 
 
 if __name__ == "__main__":
